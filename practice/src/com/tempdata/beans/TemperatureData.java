@@ -6,6 +6,10 @@ public class TemperatureData {
         System.out.println(residential.getType());
         residential.setType("Individual House");
         System.out.println(residential.getType());
+        Residential flats = new Residential();
+        System.out.println(flats.getType());
+        flats.setType("apartments");
+        System.out.println(flats.getType());
 
     }
 }

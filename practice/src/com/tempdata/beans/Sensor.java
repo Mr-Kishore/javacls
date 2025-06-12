@@ -1,10 +1,6 @@
 package com.tempdata.beans;
 
-public class Sensor {
-    private TempData[] tempData;
-    private String sensorType;
-    private String sensorID;
-    private String sensorName;
-    private String brand;
-    private String status;
+public interface Sensor {
+    public float getReading();
+    public float setReading();
 }
