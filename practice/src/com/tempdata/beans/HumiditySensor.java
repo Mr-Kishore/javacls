@@ -22,4 +22,13 @@ public class HumiditySensor implements Sensor{
     public float setReading() {
         return 0;
     }
+
+    /**
+     * @param Unit
+     * @return
+     */
+    @Override
+    public float getReading(String Unit) {
+        return 0;
+    }
 }

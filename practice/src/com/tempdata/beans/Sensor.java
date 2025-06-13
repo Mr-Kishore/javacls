@@ -2,5 +2,5 @@ package com.tempdata.beans;
 
 public interface Sensor {
     public float getReading();
-    public float setReading();
+    public float getReading(String Unit);
 }

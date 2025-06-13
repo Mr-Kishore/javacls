@@ -1,6 +1,6 @@
 package com.tempdata.beans;
 
-public abstract class Building {
+public sealed abstract class Building permits Residential, Commercial {
     private Floor[] floors;
     private String color;
     private String shape;
@@ -8,7 +8,13 @@ public abstract class Building {
     private String noOfFloors;
     private float height;
     private int squareFeet;
-    private boolean parking;
+    private boolean parkingsAvailable;
+   public abstract void getEBBill();
 
-    public abstract void getEBBill();
+    public Building(String name, float height, int squareFeet){
+        this.name = name;
+        this.height = height;
+        this.squareFeet = squareFeet;
+    }
+
 }
