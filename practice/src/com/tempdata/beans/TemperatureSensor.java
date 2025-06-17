@@ -14,17 +14,23 @@ public class TemperatureSensor implements Sensor {
 
     @Override
     public float getReading(String Unit) {
+        return 0;
+    }
+
+    @Override
+    public float getReading(ReadingUnit Unit) {
         if (Unit == null) return getReading();
 
-        switch (Unit.toLowerCase()) {
-            case "f":
+        switch (Unit) {
+            case ReadingUnit.F:
                 return (temperature * 9 / 5) + 32;
             default:
                 return temperature;
         }
     }
 
-    public static void main(String[] args) {
-
+    @Override
+    public String toString(){
+        return "temp" + temperature;
     }
 }
